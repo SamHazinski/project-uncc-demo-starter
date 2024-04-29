@@ -85,6 +85,10 @@ router.get('/callremoteapi', (req, res) => {
   .then(function(response){
     return response.json();
   }).then(function(jokes){
+
+    //Do whatever you want with the data. Save it to the database etc
+    //in this case I'm just sending it back to the user
+    //but all things are triggered by the routes
     console.log(jokes);
     res.send(jokes.value);
   })
